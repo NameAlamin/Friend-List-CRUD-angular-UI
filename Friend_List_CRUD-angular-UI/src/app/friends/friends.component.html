@@ -3,7 +3,7 @@
     <button class="btn btn-success my-1">
       <i class="fa fa-user" style="font-size: 18px"></i> Add Friends</button>
   </div>
-  <table class="table table-bordered table-striped table-info">
+  <table class="table table-bordered table-striped table-dark">
     <thead>
     <tr>
       <th>ID</th>
@@ -11,6 +11,7 @@
       <th>Department</th>
       <th>Email</th>
       <th>Country</th>
+      <th class="text-center">Action</th>
     </tr>
     </thead>
     <tbody>
@@ -20,6 +21,17 @@
       <td><span>{{friend.department}}</span></td>
       <td><span>{{friend.email}}</span></td>
       <td><span>{{friend.country}}</span></td>
+      <td>
+        <div class="text-center">
+          <button class="btn btn-sm btn-info me-3">
+            <i class="fa fa-search friends-btn" style="font-size: 18px"></i>Details</button>
+          <button class="btn btn-sm btn-warning me-3">
+            <i class="fa fa-edit friends-btn" style="font-size: 18px"></i>Edit</button>
+          <button class="btn btn-sm btn-danger">
+            <i class="fa fa-remove friends-btn" style="font-size: 18px"></i>Delete</button>
+        </div>
+      </td>
+
     </tr>
     </tbody>
   </table>
