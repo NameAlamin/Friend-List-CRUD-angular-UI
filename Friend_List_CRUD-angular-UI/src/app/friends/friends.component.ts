@@ -38,6 +38,4 @@ export class FriendsComponent implements OnInit {
       }
     );
   }
-
-
 }

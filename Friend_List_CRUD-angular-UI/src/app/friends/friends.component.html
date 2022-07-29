@@ -1,3 +1,26 @@
 <div class="container">
-  <h1>Friend Page Working</h1>
+  <div class="friends-btn">
+    <button class="btn btn-success my-1">
+      <i class="fa fa-user" style="font-size: 18px"></i> Add Friends</button>
+  </div>
+  <table class="table table-bordered table-striped table-info">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Email</th>
+      <th>Country</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let friend of friends">
+      <td><span>{{friend.id}}</span></td>
+      <td><span>{{friend.name}}</span></td>
+      <td><span>{{friend.department}}</span></td>
+      <td><span>{{friend.email}}</span></td>
+      <td><span>{{friend.country}}</span></td>
+    </tr>
+    </tbody>
+  </table>
 </div>
