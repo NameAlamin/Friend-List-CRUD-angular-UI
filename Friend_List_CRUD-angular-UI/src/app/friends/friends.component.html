@@ -1,7 +1,7 @@
 <div class="container">
   <div class="friends-btn">
-    <button class="btn btn-success my-1">
-      <i class="fa fa-user" style="font-size: 18px"></i> Add Friends</button>
+    <button class="btn btn-success my-1" (click)="open(content)">
+      <i class="fa fa-user" style="font-size: 18px"></i> Add New Friend</button>
   </div>
   <table class="table table-bordered table-striped table-dark">
     <thead>
@@ -36,3 +36,51 @@
     </tbody>
   </table>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">New Friend</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <div class="input-group">
+          <input id="name" name="name" class="form-control" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="department">Department</label>
+        <div class="input-group">
+          <input id="department" name="department" class="form-control" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input id="email" name="email" class="form-control" ngModel>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <div class="input-group">
+          <input id="country" name="country" class="form-control" ngModel>
+        </div>
+      </div>
+      <div style="text-align-last: center">
+        <button data-dismiss="modal" class="btn btn-danger m-3">Submit</button>
+      </div>
+<!--      <div class="border text-center">-->
+<!--        <button data-dismiss="modal" class="btn btn-info">Submit</button>-->
+<!--      </div>-->
+
+    </form>
+  </div>
+  <!--      Button-->
+<!--  <div class="border text-center">-->
+<!--    <button data-dismiss="modal" class="btn btn-success m-1" (click)="modal.close('Submit click')">Submit</button>-->
+<!--  </div>-->
+</ng-template>
